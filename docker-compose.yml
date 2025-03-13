@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nginx:
+    container_name: nginx
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./site01/html:/usr/share/nginx/html/site01.com:ro
+      - ./site02/html:/usr/share/nginx/html/site02.com:ro
